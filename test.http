@@ -62,6 +62,7 @@ Content-Type: application/json
 POST http://localhost:8080/pet
 Content-Type: application/json
 
+
 {
   "category": {
     "id": 1
@@ -87,7 +88,7 @@ Content-Type: application/json
   "category": {
     "id": 2
   },
-  "name": "Tedy",
+  "name": "Teddy",
   "tags": [
     {
       "id": 1
@@ -96,7 +97,26 @@ Content-Type: application/json
       "id": 3
     }
   ],
-  "petStatus":"AVAILABLE"
+  "petStatus":"PENDING"
+}
+###
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "id": 1
+  },
+  "name": "Dandy",
+  "tags": [
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ],
+  "petStatus":"SOLD"
 }
 ###
 
@@ -113,21 +133,24 @@ Content-Type: application/json
       "id": 1
     },
     {
-      "id": 3
+      "id": 2
     },
     {
-      "id": 3
+      "id": 4
     }
   ],
-  "petStatus":"AVAILABLE"
+  "petStatus":"PENDING"
 }
+
 ###
-GET http://localhost:8080/pet/4
+GET http://localhost:8080/pet/1
 Content-Type: application/json
+X-Token:0c10b9bf-ddf3-477c-8273-e2197810df04a
 ###
 
-DELETE http://localhost:8080/pet/2
+DELETE http://localhost:8080/pet/1
 Content-Type: application/json
+X-Token:0c10b9bf-ddf3-477c-8273-e2197810df04a
 
 ###
 GET http://localhost:8080/pet/findByStatus?status=sold
@@ -141,7 +164,7 @@ Content-Type: application/json
   "category": {
     "id": 1
   },
-  "name": "Mike",
+  "name": "Changed",
   "tags": [
     {
       "id": 2
@@ -165,7 +188,7 @@ Content-Type: application/json
   "petId": 2,
   "quantity": 1,
   "shipDate": "",
-  "orderStatus": "APPROVED",
+  "orderStatus": "DELIVERED",
   "complete": true
 
 }
@@ -176,7 +199,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/store/order/1
+GET http://localhost:8080/store/order/2
 Content-Type: application/json
 
 ###
@@ -184,6 +207,8 @@ Content-Type: application/json
 DELETE http://localhost:8080/store/order/2
 Content-Type: application/json
 
+###
+GET http://localhost:8080/store/order/2
 ###
 POST http://localhost:8080/user
 Content-Type: application/json
@@ -261,11 +286,21 @@ Content-Type: application/json
   "userStatus": 1
 }
 ###
-GET http://localhost:8080/user/Test
+GET http://localhost:8080/user/Nik124
 Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/user/Ivan81
+DELETE http://localhost:8080/user/Nik124
 Content-Type: application/json
+###
+
+POST http://localhost:8080/user/auth
+Content-Type: application/json
+
+{
+"username": "Nik124",
+  "password": "1234"
+}
+
 ###

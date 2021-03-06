@@ -1,7 +1,7 @@
 package by.home.service;
 
 import by.home.repository.StoreRepository;
-import by.home.model.Order;
+import by.home.model.StoreOrder;
 import by.home.model.exception.EntityAlreadyExistsException;
 import by.home.model.exception.EntityNotFoundException;
 import by.home.model.status.OrderStatusEnum;
@@ -20,36 +20,34 @@ public class StoreService {
     @Autowired
     private StoreRepository storeRepository;
 
-    public Order addOrder(Order order) {
+    public StoreOrder addOrder(StoreOrder order) {
         if (!contains(order)) {
             setShipDate(order);
             return storeRepository.save(order);
         }
-        throw new EntityAlreadyExistsException("Order with this ID already exists!");
+        throw new EntityAlreadyExistsException("StoreOrder with this ID already exists!");
     }
 
-    public void setShipDate(Order order) {
+    public void setShipDate(StoreOrder order) {
         Instant instant = Instant.now();
         LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
         String date = localDateTime.toString();
         order.setShipDate(date);
     }
 
-    public Order findById(long id) {
-        Order byId = (Order) storeRepository.getById(id);
+    public StoreOrder findById(long id) {
+        StoreOrder byId = (StoreOrder) storeRepository.getById(id);
         if (byId != null) {
             return byId;
         }
-        throw new EntityNotFoundException("Order with this ID not found!");
+        throw new EntityNotFoundException("StoreOrder with this ID not found!");
     }
 
-    public boolean deleteById(long id) {
-        Order orderById = (Order) storeRepository.getById(id);
-        if (orderById != null) {
-            storeRepository.delete(orderById);
-            return true;
+    public void deleteById(long id) {
+        if (storeRepository.findById(id).isPresent()) {
+            storeRepository.deleteById(id);
         }
-        throw new EntityNotFoundException("Order with this ID not found!");
+        throw new EntityNotFoundException("StoreOrder with this ID not found!");
     }
 
     public Map<String, Integer> getInventoriesByStatus() {
@@ -62,7 +60,8 @@ public class StoreService {
         statusesAndAmount.put("delivered", deliveredAmount);
         return statusesAndAmount;
     }
-    public boolean contains(Order order) {
+
+    public boolean contains(StoreOrder order) {
         return storeRepository.existsById(order.getId());
     }
 }

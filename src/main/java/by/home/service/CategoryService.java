@@ -17,7 +17,7 @@ public class CategoryService {
             categoryRepository.save(category);
             return true;
         }
-        throw new EntityAlreadyExistsException("Category with this ID already exists!");
+        throw new EntityAlreadyExistsException("Category with this name already exists!");
     }
 
     public Category getById(long id) {
@@ -25,6 +25,6 @@ public class CategoryService {
     }
 
     public boolean contains(Category category) {
-        return categoryRepository.existsById(category.getId());
+        return categoryRepository.existsByName(category.getName());
     }
 }

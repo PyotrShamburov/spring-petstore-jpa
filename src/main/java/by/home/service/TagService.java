@@ -21,8 +21,9 @@ public class TagService {
     }
 
     public Tag getById(long id) {
-        return tagRepository.getOne(id);
+        return tagRepository.getById(id);
     }
+
     public boolean contains(Tag tag) {
         return tagRepository.existsByName(tag.getName());
     }

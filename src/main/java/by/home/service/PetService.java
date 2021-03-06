@@ -10,8 +10,10 @@ import by.home.model.status.PetStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PetService {
@@ -24,12 +26,12 @@ public class PetService {
     private CategoryService categoryService;
 
     public Pet addPetToStorage(Pet pet) {
-        if (!petRepository.existsById(pet.getId())) {
+        if (!contains(pet)) {
             addCategoryToPet(pet);
             addTagsToPet(pet);
             return petRepository.save(pet);
         }
-        throw new EntityAlreadyExistsException("Pet with this ID already exists!");
+        throw new EntityAlreadyExistsException("Pet with this name already exists!");
     }
 
 
@@ -62,9 +64,9 @@ public class PetService {
     }
 
     public Pet getById(long id) {
-        Pet byId = (Pet) petRepository.getById(id);
-        if (byId != null) {
-            return byId;
+        Optional<Pet> optionalPet = (Optional<Pet>) petRepository.findById(id);
+        if (optionalPet.isPresent()) {
+            return (Pet) optionalPet.get();
         }
         throw new EntityNotFoundException("Pet with this ID not found");
     }
@@ -78,7 +80,7 @@ public class PetService {
             case "pending":
                 listPetWithSameStatus = petRepository.getByPetStatus(PetStatusEnum.PENDING);
                 break;
-            case "sold" :
+            case "sold":
                 listPetWithSameStatus = petRepository.getByPetStatus(PetStatusEnum.SOLD);
                 break;
             default:
@@ -87,12 +89,15 @@ public class PetService {
         return listPetWithSameStatus;
     }
 
-    public boolean deleteById(long id) {
-        Pet byId = (Pet) petRepository.getById(id);
-        if (byId != null) {
-            petRepository.delete(byId);
-            return true;
+    public void deleteById(long id) {
+        if (petRepository.existsById(id)) {
+            petRepository.deleteById(id);
+        } else {
+            throw new EntityNotFoundException("Pet with this ID not found!");
         }
-        throw new EntityNotFoundException("Pet with this ID not found!");
+    }
+
+    public boolean contains(Pet pet) {
+        return petRepository.existsByName(pet.getName());
     }
 }

@@ -19,12 +19,12 @@ public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Category category;
 
     @Pattern(regexp = "^[\\p{Upper}]?[\\p{Lower}]{3,15}$", message = "Wrong format! Only characters(3 - 15)!")
     private String name;
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<Tag> tags;
     private PetStatusEnum petStatus;
 

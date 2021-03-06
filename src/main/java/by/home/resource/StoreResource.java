@@ -1,6 +1,6 @@
 package by.home.resource;
 
-import by.home.model.Order;
+import by.home.model.StoreOrder;
 import by.home.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,20 +18,16 @@ public class StoreResource {
     private StoreService storeService;
 
     @PostMapping(path = "/order")
-    public ResponseEntity<Order> placePetOrder(@Valid @RequestBody Order order) {
-        Order addOrder = (Order) storeService.addOrder(order);
-        return new ResponseEntity<>(addOrder, HttpStatus.CREATED);
+    public ResponseEntity<StoreOrder> placePetOrder(@Valid @RequestBody StoreOrder order) {
+        StoreOrder addOrder = (StoreOrder) storeService.addOrder(order);
+        return new ResponseEntity<>(addOrder, HttpStatus.OK);
     }
 
     @GetMapping(path = "/order/{orderId}")
-    public ResponseEntity<Order> getOrderById(@PathVariable long orderId) {
+    public ResponseEntity<StoreOrder> getOrderById(@PathVariable long orderId) {
         if (orderId >= 1 && orderId <= 10) {
-            Order byId = (Order) storeService.findById(orderId);
-            if (byId != null) {
-                return new ResponseEntity<>(byId, HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
+            StoreOrder byId = (StoreOrder) storeService.findById(orderId);
+            return new ResponseEntity<>(byId, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
@@ -39,11 +35,8 @@ public class StoreResource {
     @DeleteMapping(path = "/order/{orderId}")
     public ResponseEntity<String> deleteOrder(@PathVariable long orderId) {
         if (orderId > 0) {
-            if (storeService.deleteById(orderId)) {
-                return new ResponseEntity<>("Order with ID:" + orderId + " - DELETED!", HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>("Order not found!", HttpStatus.NOT_FOUND);
-            }
+            storeService.deleteById(orderId);
+            return new ResponseEntity<>("StoreOrder with ID:" + orderId + " - DELETED!", HttpStatus.OK);
         }
         return new ResponseEntity<>("Invalid ID supplied", HttpStatus.BAD_REQUEST);
     }

@@ -1,5 +1,6 @@
 package by.home.service;
 
+import by.home.model.UserDTO;
 import by.home.repository.UserRepository;
 import by.home.model.User;
 import by.home.model.exception.EntityAlreadyExistsException;
@@ -21,8 +22,7 @@ public class UserService {
     }
 
     public User getUserByUsername(String username) {
-        User byUsername = (User) userRepository.getByUsername(username);
-        if ( byUsername != null) {
+        if (userRepository.existsByUsername(username)) {
             return userRepository.getByUsername(username);
         }
         throw new EntityNotFoundException("User with username not found!");
@@ -41,16 +41,24 @@ public class UserService {
         return userByUsername;
     }
 
-    public boolean deleteUserByUsername(String username) {
+    public void deleteUserByUsername(String username) {
         User byUsername = (User) userRepository.getByUsername(username);
         if (byUsername != null) {
             userRepository.delete(byUsername);
-            return true;
+        } else {
+            throw new EntityNotFoundException("User with this username not found!");
         }
-        throw new EntityNotFoundException("User with this username not found!");
     }
 
     public boolean contains(User user) {
         return userRepository.existsByUsername(user.getUsername());
+    }
+
+    public boolean authCheck(UserDTO userDTO) {
+        User byUsername = (User) userRepository.getByUsername(userDTO.getUsername());
+        if (byUsername != null) {
+            return byUsername.getPassword().equals(userDTO.getPassword());
+        }
+        return false;
     }
 }

@@ -19,8 +19,8 @@ public class PetResource {
 
     @PostMapping
     public ResponseEntity<Pet> addNewPet(@Valid @RequestBody Pet pet) {
-        Pet addPetToStorage = (Pet) petService.addPetToStorage(pet);
-        return new ResponseEntity<>(addPetToStorage, HttpStatus.CREATED);
+        Pet createdPet = (Pet) petService.addPetToStorage(pet);
+        return new ResponseEntity<>(createdPet, HttpStatus.CREATED);
     }
 
     @PutMapping
@@ -32,16 +32,13 @@ public class PetResource {
     @GetMapping(path = "/findByStatus")
     public ResponseEntity<List<Pet>> findByStatus(String status) {
         List<Pet> byStatus = (List<Pet>) petService.getByStatus(status);
-        if (byStatus.size() != 0) {
-            return new ResponseEntity<>(byStatus, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(byStatus, HttpStatus.OK);
     }
 
     @GetMapping(path = "/{petId}")
     public ResponseEntity<Pet> findById(@PathVariable long petId) {
-        Pet byId = (Pet) petService.getById(petId);
-        if (byId != null) {
+        if (petId > 0 ) {
+            Pet byId = (Pet) petService.getById(petId);
             return new ResponseEntity<>(byId, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -49,9 +46,10 @@ public class PetResource {
 
     @DeleteMapping(path = "/{petId}")
     public ResponseEntity<String> deleteById(@PathVariable long petId) {
-        if (petService.deleteById(petId)) {
+        if (petId > 0) {
+            petService.deleteById(petId);
             return new ResponseEntity<>("Pet with ID: " + petId + " - DELETED!", HttpStatus.OK);
         }
-        return new ResponseEntity<>("Pet not Found!", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

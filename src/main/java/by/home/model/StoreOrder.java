@@ -15,7 +15,8 @@ import javax.validation.constraints.Positive;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Order {
+public class StoreOrder {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
