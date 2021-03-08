@@ -1,7 +1,7 @@
 package by.home.service;
 
-import by.home.model.Category;
-import by.home.model.exception.EntityAlreadyExistsException;
+import by.home.entity.Category;
+import by.home.entity.exception.EntityAlreadyExistsException;
 import by.home.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

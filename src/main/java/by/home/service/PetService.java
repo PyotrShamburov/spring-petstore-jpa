@@ -1,16 +1,15 @@
 package by.home.service;
 
 import by.home.repository.PetRepository;
-import by.home.model.Category;
-import by.home.model.Pet;
-import by.home.model.Tag;
-import by.home.model.exception.EntityAlreadyExistsException;
-import by.home.model.exception.EntityNotFoundException;
-import by.home.model.status.PetStatusEnum;
+import by.home.entity.Category;
+import by.home.entity.Pet;
+import by.home.entity.Tag;
+import by.home.entity.exception.EntityAlreadyExistsException;
+import by.home.entity.exception.EntityNotFoundException;
+import by.home.entity.status.PetStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

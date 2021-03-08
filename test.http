@@ -260,10 +260,8 @@ Content-Type: application/json
   "lastName": "Ivanov",
   "email": "iva-92@mail.ru",
   "password": "1234",
-  "phone": [
-    {"phoneNumber": "+3752523455675"},
-    {"phoneNumber":"802951177302" }
-    ],
+  "phones": ["+3752523455675",
+    "802951177302"],
   "address": {
     "country": "Belarus",
     "city": "Minsk",

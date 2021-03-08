@@ -1,7 +1,7 @@
 package by.home.resource;
 
 import by.home.service.CategoryService;
-import by.home.model.Category;
+import by.home.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

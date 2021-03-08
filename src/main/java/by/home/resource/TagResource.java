@@ -1,7 +1,7 @@
 package by.home.resource;
 
 import by.home.service.TagService;
-import by.home.model.Tag;
+import by.home.entity.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package by.home.repository;
 
-import by.home.model.StoreOrder;
-import by.home.model.status.OrderStatusEnum;
+import by.home.entity.StoreOrder;
+import by.home.entity.status.OrderStatusEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StoreRepository extends JpaRepository<StoreOrder, Long> {

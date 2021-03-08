@@ -1,9 +1,8 @@
-package by.home.model;
+package by.home.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor

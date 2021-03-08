@@ -1,6 +1,6 @@
-package by.home.model;
+package by.home.entity;
 
-import by.home.model.status.OrderStatusEnum;
+import by.home.entity.status.OrderStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

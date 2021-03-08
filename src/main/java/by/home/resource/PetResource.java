@@ -1,6 +1,6 @@
 package by.home.resource;
 
-import by.home.model.Pet;
+import by.home.entity.Pet;
 import by.home.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

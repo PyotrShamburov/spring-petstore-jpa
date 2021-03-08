@@ -1,9 +1,9 @@
 package by.home.service;
 
 
-import by.home.model.Role;
-import by.home.model.User;
-import by.home.model.XToken;
+import by.home.entity.Role;
+import by.home.entity.User;
+import by.home.entity.XToken;
 import by.home.repository.XTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

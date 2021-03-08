@@ -1,4 +1,4 @@
-package by.home.model.exception;
+package by.home.entity.exception;
 
 public class EntityAlreadyExistsException extends RuntimeException{
 

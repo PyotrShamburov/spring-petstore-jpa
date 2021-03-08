@@ -1,7 +1,7 @@
 package by.home.service;
 
-import by.home.model.Tag;
-import by.home.model.exception.EntityAlreadyExistsException;
+import by.home.entity.Tag;
+import by.home.entity.exception.EntityAlreadyExistsException;
 import by.home.repository.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

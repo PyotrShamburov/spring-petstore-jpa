@@ -1,10 +1,10 @@
 package by.home.service;
 
 import by.home.repository.StoreRepository;
-import by.home.model.StoreOrder;
-import by.home.model.exception.EntityAlreadyExistsException;
-import by.home.model.exception.EntityNotFoundException;
-import by.home.model.status.OrderStatusEnum;
+import by.home.entity.StoreOrder;
+import by.home.entity.exception.EntityAlreadyExistsException;
+import by.home.entity.exception.EntityNotFoundException;
+import by.home.entity.status.OrderStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

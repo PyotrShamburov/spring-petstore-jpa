@@ -1,7 +1,7 @@
 package by.home.resource;
 
-import by.home.model.exception.EntityAlreadyExistsException;
-import by.home.model.exception.EntityNotFoundException;
+import by.home.entity.exception.EntityAlreadyExistsException;
+import by.home.entity.exception.EntityNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package by.home.resource;
 
-import by.home.model.StoreOrder;
+import by.home.entity.StoreOrder;
 import by.home.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

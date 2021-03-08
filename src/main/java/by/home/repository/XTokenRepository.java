@@ -1,6 +1,6 @@
 package by.home.repository;
 
-import by.home.model.XToken;
+import by.home.entity.XToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

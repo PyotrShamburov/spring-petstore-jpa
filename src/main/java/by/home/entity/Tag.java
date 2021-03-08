@@ -1,4 +1,4 @@
-package by.home.model;
+package by.home.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,10 +12,10 @@ import javax.validation.constraints.Pattern;
 import java.util.Objects;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Category {
+public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +28,8 @@ public class Category {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Category category = (Category) o;
-        return Objects.equals(name, category.name);
+        Tag tag = (Tag) o;
+        return Objects.equals(name, tag.name);
     }
 
     @Override

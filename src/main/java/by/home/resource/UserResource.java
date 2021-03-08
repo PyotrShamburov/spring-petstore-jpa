@@ -1,8 +1,7 @@
 package by.home.resource;
 
-import by.home.model.User;
-import by.home.model.UserDTO;
-import by.home.model.XToken;
+import by.home.entity.User;
+import by.home.entity.UserDTO;
 import by.home.service.XTokenService;
 import by.home.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

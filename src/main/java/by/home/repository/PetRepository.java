@@ -1,7 +1,7 @@
 package by.home.repository;
 
-import by.home.model.Pet;
-import by.home.model.status.PetStatusEnum;
+import by.home.entity.Pet;
+import by.home.entity.status.PetStatusEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package by.home.model;
+package by.home.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
