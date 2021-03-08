@@ -1,5 +1,6 @@
 package by.home.service;
 
+import by.home.model.Role;
 import by.home.model.UserDTO;
 import by.home.repository.UserRepository;
 import by.home.model.User;
@@ -7,6 +8,9 @@ import by.home.model.exception.EntityAlreadyExistsException;
 import by.home.model.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
 
 @Service
 public class UserService {
@@ -30,15 +34,8 @@ public class UserService {
 
     public User updateUser(String username, User newUser) {
         User userByUsername = (User) getUserByUsername(username);
-        userByUsername.setUsername(newUser.getUsername());
-        userByUsername.setFirstName(newUser.getFirstName());
-        userByUsername.setLastName(newUser.getLastName());
-        userByUsername.setEmail(newUser.getEmail());
-        userByUsername.setPassword(newUser.getPassword());
-        userByUsername.setPhone(newUser.getPhone());
-        userByUsername.setUserStatus(newUser.getUserStatus());
-        userRepository.save(userByUsername);
-        return userByUsername;
+        newUser.setId(userByUsername.getId());
+        return userRepository.save(newUser);
     }
 
     public void deleteUserByUsername(String username) {
@@ -48,6 +45,10 @@ public class UserService {
         } else {
             throw new EntityNotFoundException("User with this username not found!");
         }
+    }
+
+    public Optional<User> getUserById(long id) {
+        return userRepository.findById(id);
     }
 
     public boolean contains(User user) {

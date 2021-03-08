@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.UUID;
 
 @RestController
 @RequestMapping(path = "/user")
@@ -25,12 +24,9 @@ public class UserResource {
     @PostMapping(path = "/auth")
     public ResponseEntity<String> authorization(@Valid @RequestBody UserDTO userDTO) {
         if (userService.authCheck(userDTO)) {
-            UUID uuid = UUID.randomUUID();
-            String token = uuid.toString()+"a";
-            XToken xToken = new XToken();
-            xToken.setToken(token);
-            tokenService.addToRepository(xToken);
-            return new ResponseEntity<>(xToken.getToken(), HttpStatus.OK);
+            long userId = (long) userService.getUserByUsername(userDTO.getUsername()).getId();
+            String xToken = (String) tokenService.addToRepository(userId);
+            return new ResponseEntity<>(xToken, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -38,8 +34,8 @@ public class UserResource {
 
     @PostMapping
     public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
-        userService.addNewUser(user);
-        return new ResponseEntity<>(user, HttpStatus.CREATED);
+        User savedUser = (User) userService.addNewUser(user);
+        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
     @GetMapping(path = "/{username}")

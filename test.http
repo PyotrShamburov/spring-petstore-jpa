@@ -1,6 +1,7 @@
 POST http://localhost:8080/category
 Content-Type: application/json
 
+
 {
   "name": "dog"
 }
@@ -8,6 +9,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/category
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "cat"
@@ -17,6 +19,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/tag
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "health"
@@ -26,6 +29,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/tag
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "cat"
@@ -35,6 +39,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/tag
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "dog"
@@ -44,6 +49,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/tag
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "friend"
@@ -53,6 +59,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/tag
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "name": "good"
@@ -61,6 +68,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/pet
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 
 {
@@ -83,6 +91,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/pet
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "category": {
@@ -102,6 +111,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/pet
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "category": {
@@ -122,6 +132,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/pet
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
   "category": {
@@ -145,22 +156,24 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/pet/1
 Content-Type: application/json
-X-Token:0c10b9bf-ddf3-477c-8273-e2197810df04a
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 ###
 
 DELETE http://localhost:8080/pet/1
 Content-Type: application/json
-X-Token:0c10b9bf-ddf3-477c-8273-e2197810df04a
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 ###
 GET http://localhost:8080/pet/findByStatus?status=sold
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 ###
 PUT http://localhost:8080/pet
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
-  "id": 1,
+  "id": 2,
   "category": {
     "id": 1
   },
@@ -182,6 +195,7 @@ Content-Type: application/json
 
 POST http://localhost:8080/store/order
 Content-Type: application/json
+X-Token:
 
 {
   "id": 0,
@@ -196,6 +210,7 @@ Content-Type: application/json
 
 GET http://localhost:8080/store/inventory
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 ###
 
@@ -220,8 +235,17 @@ Content-Type: application/json
   "lastName": "Shamburov",
   "email": "petro-92@mail.ru",
   "password": "1234",
-  "phone": "80295117730",
-  "userStatus": 1
+  "phones": ["+3752523455675",
+    "802951177302"],
+  "address": {
+    "country": "Belarus",
+    "city": "Minsk",
+    "street": "Test",
+    "houseNumber": 23,
+    "postIndex": 220340
+  },
+  "userStatus": 1,
+  "role": "ADMIN"
 }
 
 ###
@@ -231,13 +255,24 @@ Content-Type: application/json
 
 {
   "id": 0,
-  "username": "Ivan81123",
+  "username": "Ivavtr",
   "firstName": "Ivan",
   "lastName": "Ivanov",
   "email": "iva-92@mail.ru",
   "password": "1234",
-  "phone": "+375294567730",
-  "userStatus": 2
+  "phone": [
+    {"phoneNumber": "+3752523455675"},
+    {"phoneNumber":"802951177302" }
+    ],
+  "address": {
+    "country": "Belarus",
+    "city": "Minsk",
+    "street": "tt",
+    "houseNumber": 23,
+    "postIndex": 220340
+  },
+  "userStatus": 2,
+  "role": "ADMIN"
 }
 
 ###
@@ -252,8 +287,18 @@ Content-Type: application/json
   "lastName": "Test",
   "email": "iva-34@mail.com",
   "password": "1234",
-  "phone": "80295145673",
-  "userStatus": 1
+  "phone": ["80295145673",
+  "234526636",
+  "3463473477"],
+  "address": {
+    "country": "Russia",
+    "city": "Moscow",
+    "street": "test",
+    "houseNumber": 29,
+    "postIndex": 220320
+  },
+  "userStatus": 1,
+  "role": "ADMIN"
 }
 
 ###
@@ -262,13 +307,14 @@ Content-Type: application/json
 
 {
   "id": 0,
-  "username": "Martin12",
+  "username": "Martin",
   "firstName": "Mark",
   "lastName": "Ivanov",
   "email": "iva-34@mail.com",
   "password": "1234",
   "phone": "80295145673",
-  "userStatus": 4
+  "userStatus": 4,
+  "role": "USER"
 
 }
 ###
@@ -283,23 +329,26 @@ Content-Type: application/json
   "email": "iva-34@mail.com",
   "password": "1234",
   "phone": "80295145673",
-  "userStatus": 1
+  "userStatus": 1,
+  "role": "USER"
 }
 ###
-GET http://localhost:8080/user/Nik124
+GET http://localhost:8080/user/petr811
 Content-Type: application/json
 
 ###
 
 DELETE http://localhost:8080/user/Nik124
 Content-Type: application/json
+
 ###
 
 POST http://localhost:8080/user/auth
 Content-Type: application/json
+X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
-"username": "Nik124",
+"username": "petr811",
   "password": "1234"
 }
 

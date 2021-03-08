@@ -4,12 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
+import java.util.List;
 import java.util.Objects;
 
 @Data
@@ -38,11 +37,15 @@ public class User {
     @Pattern(regexp = "^\\w{4,10}$", message = "Invalid password! (Char. and numbers 4 - 10)")
     private String password;
 
-    @Pattern(regexp = "^(\\+\\d{12})|(\\d{11})$", message = "Wrong number!")
-    private String phone;
+    @ElementCollection
+    private List<String> phones;
 
+    @Valid
+    @OneToOne(cascade = CascadeType.ALL)
+    private Address address;
     @Positive
     private int userStatus;
+    private Role role;
 
     @Override
     public boolean equals(Object o) {
