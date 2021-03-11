@@ -26,6 +26,7 @@ public class Pet {
     private String name;
     @ManyToMany
     private List<Tag> tags;
+    @Enumerated(value = EnumType.STRING)
     private PetStatusEnum petStatus;
 
     @Override

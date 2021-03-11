@@ -28,6 +28,7 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .addPathPatterns("/store/inventory");
 
         registry.addInterceptor(userInterceptor)
-                .addPathPatterns("/store/order");
+                .addPathPatterns("/store/order")
+                .addPathPatterns("/store/order/{orderId}");
     }
 }

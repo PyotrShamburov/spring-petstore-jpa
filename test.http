@@ -1,6 +1,6 @@
 POST http://localhost:8080/category
 Content-Type: application/json
-
+X-Token:87237e40-65d6-4463-9989-a8ec98f2a649
 
 {
   "name": "dog"
@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/category
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "cat"
@@ -19,7 +19,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/tag
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "health"
@@ -29,7 +29,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/tag
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "cat"
@@ -39,7 +39,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/tag
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "dog"
@@ -49,7 +49,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/tag
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "friend"
@@ -59,7 +59,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/tag
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "name": "good"
@@ -68,7 +68,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 ###
 POST http://localhost:8080/pet
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 
 {
@@ -91,7 +91,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/pet
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "category": {
@@ -111,7 +111,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 ###
 POST http://localhost:8080/pet
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "category": {
@@ -132,7 +132,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/pet
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "category": {
@@ -156,21 +156,21 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 ###
 GET http://localhost:8080/pet/1
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 ###
 
 DELETE http://localhost:8080/pet/1
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 ###
 GET http://localhost:8080/pet/findByStatus?status=sold
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 ###
 PUT http://localhost:8080/pet
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:94a161a4-d2a5-4805-97e2-dd180580e0a7
 
 {
   "id": 2,
@@ -195,7 +195,7 @@ X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 POST http://localhost:8080/store/order
 Content-Type: application/json
-X-Token:
+X-Token:87237e40-65d6-4463-9989-a8ec98f2a649
 
 {
   "id": 0,
@@ -210,20 +210,22 @@ X-Token:
 
 GET http://localhost:8080/store/inventory
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
+X-Token:87237e40-65d6-4463-9989-a8ec98f2a649
 
 ###
 
-GET http://localhost:8080/store/order/2
+GET http://localhost:8080/store/order/1
 Content-Type: application/json
+X-Token:87237e40-65d6-4463-9989-a8ec98f2a649
 
 ###
 
-DELETE http://localhost:8080/store/order/2
+DELETE http://localhost:8080/store/order/1
 Content-Type: application/json
+X-Token:87237e40-65d6-4463-9989-a8ec98f2a649
 
 ###
-GET http://localhost:8080/store/order/2
+GET http://localhost:8080/store/order/1
 ###
 POST http://localhost:8080/user
 Content-Type: application/json
@@ -265,7 +267,7 @@ Content-Type: application/json
   "address": {
     "country": "Belarus",
     "city": "Minsk",
-    "street": "tt",
+    "street": "ttyjf",
     "houseNumber": 23,
     "postIndex": 220340
   },
@@ -331,7 +333,7 @@ Content-Type: application/json
   "role": "USER"
 }
 ###
-GET http://localhost:8080/user/petr811
+GET http://localhost:8080/user/Test
 Content-Type: application/json
 
 ###
@@ -343,10 +345,9 @@ Content-Type: application/json
 
 POST http://localhost:8080/user/auth
 Content-Type: application/json
-X-Token:f3e74305-dd0f-429f-9e6f-6c22afae85e7
 
 {
-"username": "petr811",
+"username": "Martin",
   "password": "1234"
 }
 

@@ -37,6 +37,7 @@ public class User {
     @Pattern(regexp = "^\\w{4,10}$", message = "Invalid password! (Char. and numbers 4 - 10)")
     private String password;
 
+//    @Pattern(regexp = "^(\\+\\d{12})|(\\d{11})$")
     @ElementCollection
     private List<String> phones;
 
@@ -45,6 +46,7 @@ public class User {
     private Address address;
     @Positive
     private int userStatus;
+    @Enumerated(value = EnumType.STRING)
     private Role role;
 
     @Override

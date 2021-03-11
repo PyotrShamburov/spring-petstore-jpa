@@ -46,6 +46,7 @@ public class StoreService {
     public void deleteById(long id) {
         if (storeRepository.findById(id).isPresent()) {
             storeRepository.deleteById(id);
+            return;
         }
         throw new EntityNotFoundException("StoreOrder with this ID not found!");
     }

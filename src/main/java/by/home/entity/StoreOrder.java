@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Positive;
 
 @Data
@@ -27,6 +24,7 @@ public class StoreOrder {
     @Positive(message = "Can be only positive number!")
     private int quantity;
     private String shipDate;
+    @Enumerated(value = EnumType.STRING)
     private OrderStatusEnum orderStatus;
     private boolean complete;
 }
