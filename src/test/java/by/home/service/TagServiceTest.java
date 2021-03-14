@@ -2,17 +2,20 @@ package by.home.service;
 
 import by.home.entity.Tag;
 import by.home.repository.TagRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJpaTest
+@SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class TagServiceTest {
 
+    @Autowired
+    private TagService tagService;
     @Autowired
     private TagRepository tagRepository;
     private Tag tag;
@@ -20,25 +23,30 @@ class TagServiceTest {
     @BeforeEach
     void setUp() {
         tag = new Tag(0,"test");
-        tagRepository.save(tag);
     }
 
     @Test
+    @Order(1)
     void saveTag() {
-        Tag actualTag = (Tag) tagRepository.getOne(3L);
+        tagService.saveTag(tag);
+        Tag actualTag = (Tag) tagRepository.getById(1);
         assertEquals(tag, actualTag);
     }
 
     @Test
+    @Order(2)
     void getById() {
+        tag.setName("testid");
+        tagService.saveTag(tag);
         Tag byId = (Tag) tagRepository.getById(2);
         assertEquals(tag, byId);
     }
 
     @Test
+    @Order(3)
     void contains() {
-        String otherTagName = "test";
-        boolean actual = (boolean) tagRepository.existsByName(otherTagName);
+        Tag otherTag = new Tag(0,"test" );
+        boolean actual = tagService.contains(otherTag);
         assertTrue(actual);
     }
 }

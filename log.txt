@@ -1,0 +1,221 @@
+2021-03-14 18:00:43.795  INFO 6820 --- [main] by.home.service.UserServiceTest          : Starting UserServiceTest using Java 1.8.0_261 on DESKTOP-VU61O3C with PID 6820 (started by burov in C:\Users\burov\IdeaProjects\calculator-spring-thymeleaf\spring-petstore-jpa)
+2021-03-14 18:00:43.826  INFO 6820 --- [main] by.home.service.UserServiceTest          : No active profile set, falling back to default profiles: default
+2021-03-14 18:00:47.219  INFO 6820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-14 18:00:47.469  INFO 6820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 215 ms. Found 6 JPA repository interfaces.
+2021-03-14 18:00:49.591  INFO 6820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-14 18:00:50.750  INFO 6820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-14 18:00:51.028  INFO 6820 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-14 18:00:51.395  INFO 6820 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-14 18:00:52.251  INFO 6820 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-14 18:00:52.838  INFO 6820 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-14 18:00:55.671  INFO 6820 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-14 18:00:55.701  INFO 6820 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-14 18:00:59.506  WARN 6820 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-14 18:01:00.069  INFO 6820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-14 18:01:00.274  INFO 6820 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2a9b0387-226b-4917-8474-db9d68e0b221'
+2021-03-14 18:01:00.870  WARN 6820 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-03-14 18:01:01.444  INFO 6820 --- [main] by.home.service.UserServiceTest          : Started UserServiceTest in 18.852 seconds (JVM running for 24.623)
+2021-03-14 18:01:01.955  WARN 6820 --- [main] by.home.service.UserService              : Check user for contains in database!
+2021-03-14 18:01:02.665  INFO 6820 --- [main] by.home.service.UserService              : User(id=0, username=test, firstName=test, lastName=test, email=test@mail.ru, password=1234, phones=[3456789, 567890-0987], address=Address(id=0, country=england, city=london, street=street, houseNumber=22, postIndex=2314), userStatus=2, role=USER) added to database!
+2021-03-14 18:01:03.038  INFO 6820 --- [main] by.home.service.UserService              : Request to database for get user by name - test
+2021-03-14 18:01:03.071  INFO 6820 --- [main] by.home.service.UserService              : Request to database for get user by name - test
+2021-03-14 18:01:03.075  INFO 6820 --- [main] by.home.service.UserService              : User with name [test] updated to User(id=1, username=name, firstName=newname, lastName=newlastname, email=newmail@mail.ru, password=12345, phones=[3456789, 5678900987], address=Address(id=0, country=england, city=london, street=street, houseNumber=223, postIndex=2314), userStatus=1, role=ADMIN).
+2021-03-14 18:01:03.155  INFO 6820 --- [main] by.home.service.UserService              : User with username [name] has been deleted!
+2021-03-14 18:01:03.194  WARN 6820 --- [main] by.home.service.UserService              : Check user for contains in database!
+2021-03-14 18:01:03.196  INFO 6820 --- [main] by.home.service.UserService              : User(id=0, username=test, firstName=test, lastName=test, email=test@mail.ru, password=1234, phones=[3456789, 567890-0987], address=Address(id=0, country=england, city=london, street=street, houseNumber=22, postIndex=2314), userStatus=2, role=USER) added to database!
+2021-03-14 18:01:03.206  INFO 6820 --- [main] by.home.service.UserService              : Request to database for get user by Id - 2.
+2021-03-14 18:01:03.223  WARN 6820 --- [main] by.home.service.UserService              : Check user for contains in database!
+2021-03-14 18:01:03.242  INFO 6820 --- [main] by.home.service.UserService              : Authorization check has been started!
+2021-03-14 18:01:03.278  INFO 6820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-14 18:01:03.291  INFO 6820 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-14 18:01:03.292  INFO 6820 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-03-14 18:01:03.321  INFO 6820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-14 18:01:03.325  INFO 6820 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-14 18:02:05.933  INFO 5892 --- [main] by.home.SpringPetstoreJpaApplication     : Starting SpringPetstoreJpaApplication using Java 1.8.0_261 on DESKTOP-VU61O3C with PID 5892 (C:\Users\burov\IdeaProjects\calculator-spring-thymeleaf\spring-petstore-jpa\target\classes started by burov in C:\Users\burov\IdeaProjects\calculator-spring-thymeleaf\spring-petstore-jpa)
+2021-03-14 18:02:05.940  INFO 5892 --- [main] by.home.SpringPetstoreJpaApplication     : No active profile set, falling back to default profiles: default
+2021-03-14 18:02:07.302  INFO 5892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-14 18:02:07.446  INFO 5892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 6 JPA repository interfaces.
+2021-03-14 18:02:08.356  INFO 5892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-14 18:02:08.391  INFO 5892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-14 18:02:08.392  INFO 5892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-14 18:02:08.616  INFO 5892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-14 18:02:08.617  INFO 5892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2560 ms
+2021-03-14 18:02:08.696  INFO 5892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-14 18:02:08.883  INFO 5892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-14 18:02:08.893  INFO 5892 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:73193f2e-f441-4a37-800b-3bb309ccaf03'
+2021-03-14 18:02:09.348  INFO 5892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-14 18:02:09.416  INFO 5892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-14 18:02:09.594  INFO 5892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-14 18:02:09.743  INFO 5892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-14 18:02:10.907  INFO 5892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-14 18:02:10.924  INFO 5892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-14 18:02:11.758  WARN 5892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-14 18:02:11.913  INFO 5892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-14 18:02:12.140  WARN 5892 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-03-14 18:02:12.295  INFO 5892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-14 18:02:12.310  INFO 5892 --- [main] by.home.SpringPetstoreJpaApplication     : Started SpringPetstoreJpaApplication in 7.435 seconds (JVM running for 9.185)
+2021-03-14 18:02:39.508  INFO 5892 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-14 18:02:39.509  INFO 5892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-14 18:02:39.510  INFO 5892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-14 18:02:39.536  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.XTokenService            : Is admin check by token! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:02:39.729 ERROR 5892 --- [http-nio-8080-exec-1] by.home.service.XTokenService            : Token not found! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:02:39.730 ERROR 5892 --- [http-nio-8080-exec-1] by.home.interceptor.AdminInterceptor     : Admin check by token was failed! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:03:11.212  WARN 5892 --- [http-nio-8080-exec-2] by.home.service.UserService              : Check user for contains in database!
+2021-03-14 18:03:11.223  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.UserService              : User(id=0, username=petr811, firstName=Pyotr, lastName=Shamburov, email=petro-92@mail.ru, password=1234, phones=[+3752523455675, 802951177302], address=Address(id=0, country=Belarus, city=Minsk, street=Test, houseNumber=23, postIndex=220340), userStatus=1, role=ADMIN) added to database!
+2021-03-14 18:03:11.356  INFO 5892 --- [http-nio-8080-exec-2] by.home.resource.UserResource            : Request to add new user to database User(id=1, username=petr811, firstName=Pyotr, lastName=Shamburov, email=petro-92@mail.ru, password=1234, phones=[+3752523455675, 802951177302], address=Address(id=1, country=Belarus, city=Minsk, street=Test, houseNumber=23, postIndex=220340), userStatus=1, role=ADMIN).
+2021-03-14 18:03:29.176  INFO 5892 --- [http-nio-8080-exec-4] by.home.resource.UserResource            : Authorization start with input data UserDTO(username=petr811, password=1234).
+2021-03-14 18:03:29.178  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.UserService              : Authorization check has been started!
+2021-03-14 18:03:29.215  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.UserService              : Request to database for get user by name - petr811
+2021-03-14 18:03:29.216  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.XTokenService            : New xtoken has been generated d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:03:29.224  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.XTokenService            : Xtoken has been added to database. Key = d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:02.807  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:02.814  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:04:02.830  INFO 5892 --- [http-nio-8080-exec-7] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:02.837  WARN 5892 --- [http-nio-8080-exec-7] by.home.service.CategoryService          : Check category for contains in database!
+2021-03-14 18:04:02.851  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.CategoryService          : Category(id=1, name=dog) has been added.
+2021-03-14 18:04:02.851  INFO 5892 --- [http-nio-8080-exec-7] by.home.resource.CategoryResource        : Category has been added to database!
+2021-03-14 18:04:12.307  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.XTokenService            : Is admin check by token! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:12.313 ERROR 5892 --- [http-nio-8080-exec-9] by.home.service.XTokenService            : Token not found! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:12.313 ERROR 5892 --- [http-nio-8080-exec-9] by.home.interceptor.AdminInterceptor     : Admin check by token was failed! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:16.350  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.XTokenService            : Is admin check by token! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:16.357 ERROR 5892 --- [http-nio-8080-exec-10] by.home.service.XTokenService            : Token not found! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:16.357 ERROR 5892 --- [http-nio-8080-exec-10] by.home.interceptor.AdminInterceptor     : Admin check by token was failed! Token =e1d18ce4-beca-4076-b22a-8763ccef1893.
+2021-03-14 18:04:33.498  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:33.501  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:04:33.503  INFO 5892 --- [http-nio-8080-exec-2] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:33.507  WARN 5892 --- [http-nio-8080-exec-2] by.home.service.CategoryService          : Check category for contains in database!
+2021-03-14 18:04:33.511  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.CategoryService          : Category(id=2, name=cat) has been added.
+2021-03-14 18:04:33.511  INFO 5892 --- [http-nio-8080-exec-2] by.home.resource.CategoryResource        : Category has been added to database!
+2021-03-14 18:04:45.075  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:45.079  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:04:45.081  INFO 5892 --- [http-nio-8080-exec-4] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:04:45.090  WARN 5892 --- [http-nio-8080-exec-4] by.home.service.TagService               : Check tag for contains in database!
+2021-03-14 18:04:45.094  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.TagService               : health tag has been add to database!
+2021-03-14 18:04:45.102  INFO 5892 --- [http-nio-8080-exec-4] by.home.resource.TagResource             : Request to add new tag to database Tag(id=1, name=health).
+2021-03-14 18:05:01.652  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:01.657  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:01.661  INFO 5892 --- [http-nio-8080-exec-7] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:01.664  WARN 5892 --- [http-nio-8080-exec-7] by.home.service.TagService               : Check tag for contains in database!
+2021-03-14 18:05:01.666  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.TagService               : cat tag has been add to database!
+2021-03-14 18:05:01.669  INFO 5892 --- [http-nio-8080-exec-7] by.home.resource.TagResource             : Request to add new tag to database Tag(id=2, name=cat).
+2021-03-14 18:05:08.588  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:08.593  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:08.598  INFO 5892 --- [http-nio-8080-exec-9] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:08.600  WARN 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Check tag for contains in database!
+2021-03-14 18:05:08.601  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : dog tag has been add to database!
+2021-03-14 18:05:08.605  INFO 5892 --- [http-nio-8080-exec-9] by.home.resource.TagResource             : Request to add new tag to database Tag(id=3, name=dog).
+2021-03-14 18:05:15.003  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:15.008  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:15.009  INFO 5892 --- [http-nio-8080-exec-1] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:15.011  WARN 5892 --- [http-nio-8080-exec-1] by.home.service.TagService               : Check tag for contains in database!
+2021-03-14 18:05:15.013  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.TagService               : friend tag has been add to database!
+2021-03-14 18:05:15.016  INFO 5892 --- [http-nio-8080-exec-1] by.home.resource.TagResource             : Request to add new tag to database Tag(id=4, name=friend).
+2021-03-14 18:05:21.714  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:21.722  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:21.726  INFO 5892 --- [http-nio-8080-exec-3] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:21.729  WARN 5892 --- [http-nio-8080-exec-3] by.home.service.TagService               : Check tag for contains in database!
+2021-03-14 18:05:21.731  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.TagService               : good tag has been add to database!
+2021-03-14 18:05:21.738  INFO 5892 --- [http-nio-8080-exec-3] by.home.resource.TagResource             : Request to add new tag to database Tag(id=5, name=good).
+2021-03-14 18:05:28.780  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:28.783  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:28.786  INFO 5892 --- [http-nio-8080-exec-5] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:28.798  WARN 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Check pet for contains in database!
+2021-03-14 18:05:28.803  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.CategoryService          : Request to database for category by id. ID=1.
+2021-03-14 18:05:28.807  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Category(id=1, name=dog)has been add to pet with name Baddy
+2021-03-14 18:05:28.807  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.TagService               : Request to database for find tag with ID = 2.
+2021-03-14 18:05:28.811  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Tag(id=2, name=null)has been add to pet with name Baddy
+2021-03-14 18:05:28.811  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.TagService               : Request to database for find tag with ID = 4.
+2021-03-14 18:05:28.813  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Tag(id=4, name=null)has been add to pet with name Baddy
+2021-03-14 18:05:28.814  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : All available tags set to Baddy
+2021-03-14 18:05:28.815  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Pet(id=0, category=Category(id=1, name=dog), name=Baddy, tags=[Tag(id=2, name=cat), Tag(id=4, name=friend)], petStatus=AVAILABLE) add to database!
+2021-03-14 18:05:28.826  INFO 5892 --- [http-nio-8080-exec-5] by.home.resource.PetResource             : Request to add new pet to database Pet(id=1, category=Category(id=1, name=dog), name=Baddy, tags=[Tag(id=2, name=cat), Tag(id=4, name=friend)], petStatus=AVAILABLE).
+2021-03-14 18:05:47.129  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:47.132  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:47.135  INFO 5892 --- [http-nio-8080-exec-7] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:47.138  WARN 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Check pet for contains in database!
+2021-03-14 18:05:47.139  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.CategoryService          : Request to database for category by id. ID=2.
+2021-03-14 18:05:47.141  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Category(id=2, name=cat)has been add to pet with name Teddy
+2021-03-14 18:05:47.142  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.TagService               : Request to database for find tag with ID = 1.
+2021-03-14 18:05:47.144  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Tag(id=1, name=null)has been add to pet with name Teddy
+2021-03-14 18:05:47.144  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.TagService               : Request to database for find tag with ID = 3.
+2021-03-14 18:05:47.146  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Tag(id=3, name=null)has been add to pet with name Teddy
+2021-03-14 18:05:47.147  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : All available tags set to Teddy
+2021-03-14 18:05:47.147  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Pet(id=0, category=Category(id=2, name=cat), name=Teddy, tags=[Tag(id=1, name=health), Tag(id=3, name=dog)], petStatus=PENDING) add to database!
+2021-03-14 18:05:47.155  INFO 5892 --- [http-nio-8080-exec-7] by.home.resource.PetResource             : Request to add new pet to database Pet(id=2, category=Category(id=2, name=cat), name=Teddy, tags=[Tag(id=1, name=health), Tag(id=3, name=dog)], petStatus=PENDING).
+2021-03-14 18:05:55.082  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:55.085  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:05:55.087  INFO 5892 --- [http-nio-8080-exec-9] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:05:55.090  WARN 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Check pet for contains in database!
+2021-03-14 18:05:55.094  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.CategoryService          : Request to database for category by id. ID=1.
+2021-03-14 18:05:55.097  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Category(id=1, name=dog)has been add to pet with name Dandy
+2021-03-14 18:05:55.098  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Request to database for find tag with ID = 2.
+2021-03-14 18:05:55.100  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Tag(id=2, name=null)has been add to pet with name Dandy
+2021-03-14 18:05:55.101  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Request to database for find tag with ID = 3.
+2021-03-14 18:05:55.111  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Tag(id=3, name=null)has been add to pet with name Dandy
+2021-03-14 18:05:55.111  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : All available tags set to Dandy
+2021-03-14 18:05:55.112  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Pet(id=0, category=Category(id=1, name=dog), name=Dandy, tags=[Tag(id=2, name=cat), Tag(id=3, name=dog)], petStatus=SOLD) add to database!
+2021-03-14 18:05:55.125  INFO 5892 --- [http-nio-8080-exec-9] by.home.resource.PetResource             : Request to add new pet to database Pet(id=3, category=Category(id=1, name=dog), name=Dandy, tags=[Tag(id=2, name=cat), Tag(id=3, name=dog)], petStatus=SOLD).
+2021-03-14 18:06:02.957  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:02.959  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:06:02.961  INFO 5892 --- [http-nio-8080-exec-10] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:02.963  WARN 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Check pet for contains in database!
+2021-03-14 18:06:02.966  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.CategoryService          : Request to database for category by id. ID=1.
+2021-03-14 18:06:02.970  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Category(id=1, name=dog)has been add to pet with name Barry
+2021-03-14 18:06:02.971  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.TagService               : Request to database for find tag with ID = 1.
+2021-03-14 18:06:02.972  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Tag(id=1, name=null)has been add to pet with name Barry
+2021-03-14 18:06:02.973  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.TagService               : Request to database for find tag with ID = 2.
+2021-03-14 18:06:02.975  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Tag(id=2, name=null)has been add to pet with name Barry
+2021-03-14 18:06:02.976  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.TagService               : Request to database for find tag with ID = 4.
+2021-03-14 18:06:02.978  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Tag(id=4, name=null)has been add to pet with name Barry
+2021-03-14 18:06:02.979  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : All available tags set to Barry
+2021-03-14 18:06:02.980  INFO 5892 --- [http-nio-8080-exec-10] by.home.service.PetService               : Pet(id=0, category=Category(id=1, name=dog), name=Barry, tags=[Tag(id=1, name=health), Tag(id=2, name=cat), Tag(id=4, name=friend)], petStatus=PENDING) add to database!
+2021-03-14 18:06:02.987  INFO 5892 --- [http-nio-8080-exec-10] by.home.resource.PetResource             : Request to add new pet to database Pet(id=4, category=Category(id=1, name=dog), name=Barry, tags=[Tag(id=1, name=health), Tag(id=2, name=cat), Tag(id=4, name=friend)], petStatus=PENDING).
+2021-03-14 18:06:10.940  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:10.942  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:06:10.945  INFO 5892 --- [http-nio-8080-exec-3] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:10.954  INFO 5892 --- [http-nio-8080-exec-3] by.home.service.PetService               : Request pet by id. ID = 1
+2021-03-14 18:06:10.954  INFO 5892 --- [http-nio-8080-exec-3] by.home.resource.PetResource             : Request for find pet in database by Id! Id [1].
+2021-03-14 18:06:25.193  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:25.197  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:06:25.202  INFO 5892 --- [http-nio-8080-exec-5] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:25.239  INFO 5892 --- [http-nio-8080-exec-5] by.home.service.PetService               : Pet with ID 1 has been deleted!
+2021-03-14 18:06:25.240  INFO 5892 --- [http-nio-8080-exec-5] by.home.resource.PetResource             : Request for delete pet in database by Id! Id [1].
+2021-03-14 18:06:39.407  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:39.410  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:06:39.414  INFO 5892 --- [http-nio-8080-exec-7] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:39.472  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.PetService               : Request for list of pet's status!
+2021-03-14 18:06:39.473  INFO 5892 --- [http-nio-8080-exec-7] by.home.resource.PetResource             : Request for find pet in database by status! Status [sold].
+2021-03-14 18:06:53.561  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:53.563  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:06:53.569  INFO 5892 --- [http-nio-8080-exec-9] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:06:53.573  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Request pet by id. ID = 2
+2021-03-14 18:06:53.574  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.CategoryService          : Request to database for category by id. ID=1.
+2021-03-14 18:06:53.576  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Category(id=1, name=dog)has been add to pet with name Changed
+2021-03-14 18:06:53.576  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Request to database for find tag with ID = 2.
+2021-03-14 18:06:53.578  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Tag(id=2, name=null)has been add to pet with name Changed
+2021-03-14 18:06:53.579  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Request to database for find tag with ID = 1.
+2021-03-14 18:06:53.580  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Tag(id=1, name=null)has been add to pet with name Changed
+2021-03-14 18:06:53.580  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.TagService               : Request to database for find tag with ID = 4.
+2021-03-14 18:06:53.582  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Tag(id=4, name=null)has been add to pet with name Changed
+2021-03-14 18:06:53.583  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : All available tags set to Changed
+2021-03-14 18:06:53.600  INFO 5892 --- [http-nio-8080-exec-9] by.home.service.PetService               : Pet with ID 2 updated to Pet(id=2, category=Category(id=1, name=dog), name=Changed, tags=[Tag(id=2, name=cat), Tag(id=1, name=health), Tag(id=4, name=friend)], petStatus=SOLD)
+2021-03-14 18:06:53.601  INFO 5892 --- [http-nio-8080-exec-9] by.home.resource.PetResource             : Request to update existing pet in database [Changed].
+2021-03-14 18:07:14.932  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.XTokenService            : Is user check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:14.934  INFO 5892 --- [http-nio-8080-exec-1] by.home.interceptor.UserInterceptor      : User check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:14.946  WARN 5892 --- [http-nio-8080-exec-1] by.home.service.StoreService             : Check order for contains in database!
+2021-03-14 18:07:14.958  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.StoreService             : Date 2021-03-14T18:07:14.952 added to order with Id = 0.
+2021-03-14 18:07:14.959  INFO 5892 --- [http-nio-8080-exec-1] by.home.service.StoreService             : StoreOrder(id=0, petId=2, quantity=1, shipDate=2021-03-14T18:07:14.952, orderStatus=DELIVERED, complete=true) added to database.
+2021-03-14 18:07:14.969  INFO 5892 --- [http-nio-8080-exec-1] by.home.resource.StoreResource           : Request to add new order to database StoreOrder(id=1, petId=2, quantity=1, shipDate=2021-03-14T18:07:14.952, orderStatus=DELIVERED, complete=true).
+2021-03-14 18:07:35.908  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.XTokenService            : Is admin check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:35.911  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.UserService              : Request to database for get user by Id - 1.
+2021-03-14 18:07:35.915  INFO 5892 --- [http-nio-8080-exec-2] by.home.interceptor.AdminInterceptor     : Admin check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:35.923  INFO 5892 --- [http-nio-8080-exec-2] by.home.service.StoreService             : Request to database for get inventories!
+2021-03-14 18:07:35.923  INFO 5892 --- [http-nio-8080-exec-2] by.home.resource.StoreResource           : Request for get order inventory in database.
+2021-03-14 18:07:43.848  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.XTokenService            : Is user check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:43.848  INFO 5892 --- [http-nio-8080-exec-4] by.home.interceptor.UserInterceptor      : User check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:43.854  INFO 5892 --- [http-nio-8080-exec-4] by.home.service.StoreService             : Request to database for order with Id = 1.
+2021-03-14 18:07:43.854  INFO 5892 --- [http-nio-8080-exec-4] by.home.resource.StoreResource           : Request for find order in database by Id! Id [1].
+2021-03-14 18:07:50.217  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.XTokenService            : Is user check by token! Token =d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:50.218  INFO 5892 --- [http-nio-8080-exec-7] by.home.interceptor.UserInterceptor      : User check passed with token d77bd5f8-62a4-4d46-990a-5e8c30f1c554.
+2021-03-14 18:07:50.229  INFO 5892 --- [http-nio-8080-exec-7] by.home.service.StoreService             : Request to database for delete order with Id = 1. Order deleted!
+2021-03-14 18:07:50.229  INFO 5892 --- [http-nio-8080-exec-7] by.home.resource.StoreResource           : Request for delete order in database by Id! Id [1].

@@ -2,6 +2,7 @@ package by.home.resource;
 
 import by.home.entity.exception.EntityAlreadyExistsException;
 import by.home.entity.exception.EntityNotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
+@Slf4j
 public class ExceptionController extends ResponseEntityExceptionHandler {
 
     @Override
@@ -24,6 +26,7 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
         for (FieldError fieldError : ex.getFieldErrors()) {
             errors.put(fieldError.getField(), fieldError.getDefaultMessage());
         }
+        log.error("Validation errors has been intercepted!");
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
